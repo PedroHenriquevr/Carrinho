@@ -1,13 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
+import { SafeAreaView, StatusBar } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react'
+import Carrinho from './src/pages/Carrinho';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>pepe</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView>
+      <StatusBar  />
+      <Carrinho/>
+    </SafeAreaView>
   );
 }
 
