@@ -12,14 +12,13 @@ export default function Carrinho() {
         <Text style={style.titulo}>Detalhes do Carrinho</Text>
         <View style={style.carrinho}>
         <Text style={style.nome}>Carrinho de Compras</Text>
-        <View>
-            <Image source={logo}/>
-        <Text>Fazenda Etec Cidade do Livro</Text>
+        <View style={style.fazenda}>
+            <Image source={logo} style={style.imagemFazenda}/>
+        <Text style={style.nomeFazenda}>Fazenda Etec Cidade do Livro</Text>
         </View>
-        <Text>Carrinho de Compras</Text>
-        <Text>Uma cesta com produtos selecionados cuidadosamente
+        <Text style={style.descricao}>Uma cesta com produtos selecionados cuidadosamente
             da fazenda direto para a sua cozinha.</Text>
-        <Text>R$ 40,00</Text>
+        <Text style={style.preco}>R$ 40,00</Text>
     </View>
     </>
     )
@@ -38,7 +37,7 @@ const style = StyleSheet.create({
         fontSize: 24,
         lineHeight: 26,
         padding: 16,
-        fontFamily: "MontSerratItalic"
+        fontFamily: "MontSerratBold"
     },
     carrinho: {
         paddingVertical: 8,
@@ -49,5 +48,29 @@ const style = StyleSheet.create({
         lineHeight: 42,
         color: '#464646',
         fontFamily: 'MontSerratBold'
+    },
+    fazenda: {
+        flexDirection: "row",
+        paddingVertical: 12
+    },
+    imagemFazenda: {
+        width: 32,
+        height: 32
+    },
+    nomeFazenda: {
+        fontFamily: "MontSerratBold",
+        fontSize: 16,
+        lineHeight: 26,
+        marginLeft: 12,
+    },
+    descricao: {
+        color: "#A3A3A3",
+        fontFamily: "MontSerratItalic",
+    },
+    preco: {
+        fontSize: 26,
+        fontFamily: "MontSerratRegular",
+        color: "#2A9F85",
+        marginTop: 8
     }
 })
