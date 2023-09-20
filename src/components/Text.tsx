@@ -1,8 +1,20 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, StyleSheet } from "react-native";
 
-export default function Text() {
+export type TextProps = {
+    children: React.ReactNode;
+    style?: object;
+}
+
+export default function TextStyle({ children, style }: TextProps) {
     return(
-        <Text>{childer}</Text>
+        <Text style={style}>{children}</Text>
     )
 }
+
+const style = StyleSheet.create({
+    text: {
+        fontSize: 16,
+        color: "#000",
+    }
+});

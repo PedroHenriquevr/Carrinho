@@ -1,12 +1,12 @@
 import React from "react"
 import { Text, View, Image, StyleSheet } from "react-native"
 import logo from "../../../../assets/logo.png"
-
+import TextStyle from "../../../components/Text"
 
 export default function Detalhe() {
     return (
     <>
-    <Text style={style.nome}>Carrinho de Compras</Text>
+    <TextStyle style={style.nome}>Carrinho de Compras</TextStyle>
         <View style={style.fazenda}>
             <Image source={logo} style={style.imagemFazenda}/>
         <Text style={style.nomeFazenda}>Fazenda Etec Cidade do Livro</Text>
